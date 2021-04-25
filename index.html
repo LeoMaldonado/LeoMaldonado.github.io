@@ -1,15 +1,22 @@
 <html>
     <head>
+        <link href='http://fonts.googleapis.com/css?family=Lato:200,300,400,700' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  
         <style>
             body {
+                font-family: Lato;
+                font-weight: 300;
                 margin: 0px;
-                background: linear-gradient(#888000, yellow);
+                background: linear-gradient(#ccc226, #f2f28b);
             }
 
             .content {
                 display: grid;
                 grid-template-rows: 1fr auto;
                 align-content: center;
+                max-width: 960px;
+                margin: auto;
                 height: 100%;
             }
 
@@ -18,7 +25,6 @@
                 grid-template-columns: auto;
                 grid-gap: 20px;
                 align-content: center;
-                max-width: 960px;
                 margin: 20px;
             }
 
@@ -30,19 +36,42 @@
 
             .logo {
                 height: 100px;
-                
             }
 
             a {
-                background: rgba(0,0,0,.15);
-                color: white;
+                background: rgba(255,255,255,.35);
+                color: #202020;
                 padding: 11px;
-                border: 1px solid black;
+                border: 1px solid #777;
                 border-radius: 10px;
                 text-align: center;
-                align-content: center;
                 text-decoration: none;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                text-align: center;
+                transition: all .5s;
             }
+
+            a:active, a:hover {
+                background: white;
+                box-shadow: 2px 5px 5px rgba(0,0,0,.15);
+            }
+
+            @media screen and (min-width: 750px) {
+                .links {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                .content {
+                    grid-template-rows: auto auto;
+                }
+
+                .logo {
+                    height: 200px;
+                }
+            }
+
         </style>        
     </head>
     <body>
@@ -52,10 +81,30 @@
             </div>
 
             <div class="links">
-                <a href="https://shopee.com.br/ju_goncalvesdias?categoryId=22133&itemId=9127670069">Shopee</a>
-                <a href="https://shopee.com.br/ju_goncalvesdias?categoryId=22133&itemId=9127670069">Shopee</a>
-                <a href="https://shopee.com.br/ju_goncalvesdias?categoryId=22133&itemId=9127670069">Shopee</a>
-                <a href="https://shopee.com.br/ju_goncalvesdias?categoryId=22133&itemId=9127670069">Shopee</a>
+                <a href="https://shopee.com.br/ju_goncalvesdias?categoryId=22133&itemId=9127670069">
+                    <i class="fas fa-shopping-cart"></i>
+                    Shopee - Compre com desconto
+                </a>
+                <a href="https://wa.me/message/O2MIU4AFG7NBN1">
+                    <i class="fab fa-whatsapp"></i>
+                    Entre em contato
+                </a>
+                <a href="https://www.instagram.com/ju_goncalvesdias/?hl=pt-br">
+                    <i class="fab fa-instagram"></i>
+                    @Ju_GoncalvesDias
+                </a>
+                <a href="https://www.instagram.com/umaduziadesign/?hl=pt-br">
+                    <i class="fab fa-instagram"></i>
+                    @UmaDuziaDesign
+                </a>
+                <a href="https://talk7.elo7.com.br/s/15609A?shareOrigin=com.elo7.commons&utm_source=talk7_android&utm_medium=com.elo7.commons">
+                    <i class="fas fa-shopping-cart"></i>
+                    Elo7 - Parcele em até 12 vezes
+                </a>
+                <a href="https://lista.mercadolivre.com.br/_CustId_280728759">
+                    <i class="fas fa-shopping-cart"></i>
+                    Mercado Livre - Frete grátis
+                </a>
             </div>
         </div>
     </body>
